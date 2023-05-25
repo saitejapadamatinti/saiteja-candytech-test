@@ -1,0 +1,17 @@
+.category-main-div{
+    width: 100%;
+    padding: 20px;
+}
+.category-opyion-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.category-select{
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.category-option-item{
+    padding: 20px;
+}

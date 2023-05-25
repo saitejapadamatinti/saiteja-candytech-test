@@ -1,0 +1,29 @@
+.side-bar-main-div{
+    height: 100vh;
+    width: 160px;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.side-home-item-active{
+    
+    height: 50px;
+    color: #fff;
+    background-color: black;
+}
+.side-home-item-inactive{
+    height: 50px;
+    color: #fff;
+    text-decoration: none;
+    /* border-bottom: 2px solid #000;
+    border-top: 2px solid #000; */
+}
+
+.side-bar-center-cls{
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
