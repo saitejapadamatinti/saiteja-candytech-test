@@ -3,12 +3,10 @@ import "./index.css";
 
 const Table = (props) => {
   const { employeeData } = props;
-  // const {id,department, designamtion , email, name, status} = employeeData
-  // console.log(id,department, designamtion , email, name, status)
 
   return (
-    <div>
-      <div className="table-div">
+    <div className="table-div">
+      <div >
         <table className="table-main">
           <tr className="table-headings table-tr active-background">
             <th className="table-th">Id</th>

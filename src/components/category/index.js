@@ -44,7 +44,7 @@ const Category = ({ employeeDatas }) => {
         >
           <option className="category-option-item">All</option>
           {departsArray.map((eachDepartment) => (
-            <option>{eachDepartment}</option>
+            <option key={eachDepartment}>{eachDepartment}</option>
           ))}
         </select>
       </div>

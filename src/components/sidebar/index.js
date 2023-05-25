@@ -27,8 +27,6 @@ const Sidebar = () => {
       >
         Category
       </NavLink>
-      {/* <p className="side-home-item-active side-bar-center-cls">Home</p>
-        <p className="side-home-item-inactive side-bar-center-cls">Category</p> */}
     </div>
   );
 };

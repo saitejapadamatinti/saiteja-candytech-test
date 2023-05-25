@@ -177,7 +177,7 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path="/" element={<Home employeeDatas={employeeDatas} />} />
-          <Route path="/category" element={<Category employeeDatas={employeeDatas} />} />
+          <Route path="/category" element={<Category employeeDatas={employeeDatas}  />} />
         </Routes>
       </div>
     </div>

@@ -30,7 +30,8 @@ table, .table-th, .table-td {
 }
 .table-div{
     overflow-y: auto;
-    max-height: 80vh;
+    max-height: 76vh;
+    padding: 5px;
 }
 
 .active-background{

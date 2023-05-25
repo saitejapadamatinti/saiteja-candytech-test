@@ -4,33 +4,27 @@ import "./index.css";
 import Table from "../table";
 import ToogleSwitch from "../toggleSwitch";
 
-
-
-
-// const employeeUrl =
-// "https://testsyncoffice.netlify.app/.netlify/functions/api/getEmployeesData";
-
 const Home = (props) => {
-  const {employeeDatas} = props
+  const { employeeDatas } = props;
+  // employee data state
   const [employeeData, setEmployeeData] = useState(employeeDatas);
+  // active data or inactive data state
   const [activeData, setActiveData] = useState([]);
+  // toggle button status state
   const [toggleSwitchStatus, setToggleswitchStatus] = useState(true);
 
-  const [toggleStatus, setToggleStatus] = useState();
+  // const [toggleStatus, setToggleStatus] = useState();
 
-  // const fetchingDataFromAPi = async () => {
-      
-  // };
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       "https://testsyncoffice.netlify.app/.netlify/functions/api/getEmployeesData"
+  //     )
+  //     .then((res) => console.log(res))
+  //     .catch((error) => console.log(error))
+  // }, []);
 
-  useEffect(() => {
-    // fetchingDataFromAPi()
-    axios.get("https://testsyncoffice.netlify.app/.netlify/functions/api/getEmployeesData").then(
-      response => console.log(response)
-    )
-      // const data =await response.json()
-  }, [])
-
-  // checking toggle status and filtering data 
+  // checking toggle status and filtering data
   useEffect(() => {
     filteringEmployeeData(toggleSwitchStatus);
   }, [toggleSwitchStatus]);
@@ -61,7 +55,10 @@ const Home = (props) => {
         </div>
         <div className="toggle-div">
           <span className="home-toggle-text">Active</span>
-          <ToogleSwitch toggleSwitchStatus={toggleSwitchStatus} gettingToggleStatus={gettingToggleStatus} />
+          <ToogleSwitch
+            toggleSwitchStatus={toggleSwitchStatus}
+            gettingToggleStatus={gettingToggleStatus}
+          />
           <span className="home-toggle-text">InActive</span>
         </div>
       </div>
