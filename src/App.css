@@ -13,7 +13,6 @@
   }
 }
 
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -38,7 +37,7 @@
   }
 }
 
-*{
+* {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
@@ -46,21 +45,20 @@
 /* .app-main-container{
   height: 100vh;
 } */
-.app-container{
+.app-container {
   display: flex;
-  height: 100%;  
+  height: 100%;
 }
-
 
 /* scroll bar styles */
 *::-webkit-scrollbar {
   width: 5px;
 }
- 
+
 *::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
- 
+
 *::-webkit-scrollbar-thumb {
   background-color: rgb(79, 79, 79);
   outline: 1px solid rgb(79, 79, 79);

@@ -1,55 +1,22 @@
-import React, { useEffect, useState } from "react";
-import Table from "../table";
+import React, { useState } from "react";
+// import CategoryNav from '../categoryNavbar'
 import "./index.css";
+import Department from "../department";
+import Designation from "../designation";
 
-const Category = ({ employeeDatas }) => {
-  // fetched Array Data state
-  const [categoryEmployeeData, setCategoryEmployeeData] =
-    useState(employeeDatas);
-  // filtered Array Data state
-  const [filterdCategoryData, setFilterdCategoryData] = useState([]);
-  // department category Array Data state
-  const [category, setCategory] = useState("All");
+const activeClass = "category-tab-item-active category-tab-div-center"
+const inActiveClass = "category-tab-item-inActive category-tab-div-center"
 
-  // getting all department names into array
-  const departmentArray = [];
-  for (let eachItem of employeeDatas) {
-    const { department } = eachItem;
-    departmentArray.push(department);
-  }
-
-  // removing duplicates from departmentArray
-  const departsArray = departmentArray.filter((current, nextId) => {
-    return departmentArray.indexOf(current) === nextId;
-  });
-
-  // fliltering as per selected department data
-  useEffect(() => {
-    if (category === "All") {
-      setFilterdCategoryData(categoryEmployeeData);
-    } else {
-      const categoryArray = employeeDatas.filter(
-        (each) => each.department === category
-      );
-      setFilterdCategoryData(categoryArray);
-    }
-  }, [category]);
-
+const Category = () => {
+  const [selectedTab, setSelectedTab] = useState("department");
   return (
     <div className="category-main-div">
-      <div className="category-opyion-div">
-        <select
-          className="category-select"
-          onChange={(e) => setCategory(e.target.value)}
-        >
-          <option className="category-option-item">All</option>
-          {departsArray.map((eachDepartment) => (
-            <option key={eachDepartment}>{eachDepartment}</option>
-          ))}
-        </select>
+      <div className="category-nav-div">
+        <p className={(selectedTab === "department" ? `${activeClass}` : `${inActiveClass}`)  } onClick={() => setSelectedTab("department")}>department</p>
+        <p className={(selectedTab === "designation" ? `${activeClass}` : `${inActiveClass}`)  }  onClick={() => setSelectedTab("designation")}>designation</p>
       </div>
-      <div>
-        <Table employeeData={filterdCategoryData} />
+      <div className="">
+        {selectedTab === "department" ? <Department /> : <Designation />}
       </div>
     </div>
   );

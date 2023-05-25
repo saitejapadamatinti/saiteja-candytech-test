@@ -1,7 +1,3 @@
-.category-main-div {
-  width: 100%;
-  padding: 30px;
-}
 .category-nav-div {
   display: flex;
   gap: 20px;
@@ -9,17 +5,16 @@
   height: 50px;
   padding-left: 20px;
 }
-.category-tab-item-active {
+.category-nav-item-active {
   color: rgb(0, 177, 248);
   border-bottom: 3px solid skyblue;
 }
-.category-tab-item-inActive {
+.category-nav-item-inActive {
   color: grey;
 }
-.category-tab-div-center {
+.category-nav-div-center {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  cursor: pointer;
 }
