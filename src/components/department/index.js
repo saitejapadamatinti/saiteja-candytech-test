@@ -78,19 +78,19 @@ const departmentApi =
   "https://testsyncoffice.netlify.app/.netlify/functions/api/getDepartmentData";
 
 const Department = () => {
-  const fetchingDeratmentData = async () => {
-    try {
-      const response = await fetch(departmentApi);
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const fetchingDeratmentData = async () => {
+  //   try {
+  //     const response = await fetch(departmentApi);
+  //     const data = await response.json();
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchingDeratmentData();
-  }, []);
+  // useEffect(() => {
+  //   fetchingDeratmentData();
+  // }, []);
 
   return (
     <div className="grid grid-cols-4 gap-4 mt-[20px] h-[73vh] overflow-auto pr-[10px]">

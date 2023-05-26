@@ -173,20 +173,20 @@ const Home = () => {
   // toggle button status state
   const [toggleSwitchStatus, setToggleswitchStatus] = useState(true);
 
-  const fetchingEmployeeDataFromApi = async () => {
-    try {
-      const response = await fetch(
-        "https://testsyncoffice.netlify.app/.netlify/functions/api/getEmployeesData"
-      );
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    fetchingEmployeeDataFromApi();
-  }, []);
+  // const fetchingEmployeeDataFromApi = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       "https://testsyncoffice.netlify.app/.netlify/functions/api/getEmployeesData"
+  //     );
+  //     const data = await response.json();
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  // useEffect(() => {
+  //   fetchingEmployeeDataFromApi();
+  // }, []);
 
   // checking toggle status and filtering data
   useEffect(() => {

@@ -78,19 +78,19 @@ const designationDataApi =
   "https://testsyncoffice.netlify.app/.netlify/functions/api/getDesignationData";
 
 const Designation = () => {
-  const fetchingDesignationApiData = async () => {
-    try {
-      const response = await fetch(designationDataApi);
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const fetchingDesignationApiData = async () => {
+  //   try {
+  //     const response = await fetch(designationDataApi);
+  //     const data = await response.json();
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchingDesignationApiData();
-  }, []);
+  // useEffect(() => {
+  //   fetchingDesignationApiData();
+  // }, []);
 
   return (
     <div className="grid grid-cols-4 gap-4 mt-[20px] h-[73vh] overflow-auto pr-[10px]">
