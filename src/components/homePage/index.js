@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import "./index.css";
 import Table from "../table";
 import ToogleSwitch from "../toggleSwitch";
 
@@ -175,16 +173,20 @@ const Home = () => {
   // toggle button status state
   const [toggleSwitchStatus, setToggleswitchStatus] = useState(true);
 
-  // const [toggleStatus, setToggleStatus] = useState();
-
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       "https://testsyncoffice.netlify.app/.netlify/functions/api/getEmployeesData"
-  //     )
-  //     .then((res) => console.log(res))
-  //     .catch((error) => console.log(error))
-  // }, []);
+  const fetchingEmployeeDataFromApi = async () => {
+    try {
+      const response = await fetch(
+        "https://testsyncoffice.netlify.app/.netlify/functions/api/getEmployeesData"
+      );
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchingEmployeeDataFromApi();
+  }, []);
 
   // checking toggle status and filtering data
   useEffect(() => {
@@ -210,18 +212,18 @@ const Home = () => {
   };
 
   return (
-    <div className="home-main-container">
-      <div className="home-employee-container">
+    <div className="text-black w-full p-[20px]">
+      <div className="flex justify-between mb-[20px]">
         <div>
-          <p>Employee's</p>
+          <p className="font-semibold">Employee's</p>
         </div>
-        <div className="toggle-div">
-          <span className="home-toggle-text">Active</span>
+        <div className="flex justify-center items-center gap-[10px]">
+          <span className="text-[17px]">Active</span>
           <ToogleSwitch
             toggleSwitchStatus={toggleSwitchStatus}
             gettingToggleStatus={gettingToggleStatus}
           />
-          <span className="home-toggle-text">InActive</span>
+          <span className="text-[17px]">InActive</span>
         </div>
       </div>
       <div>

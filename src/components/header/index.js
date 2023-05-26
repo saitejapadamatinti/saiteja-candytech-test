@@ -1,10 +1,9 @@
 import React from 'react'
-import "./index.css"
 
 const Header = () => {
   return (
-    <div className='header-main-div'>
-      <h3>Syncoffice</h3>
+    <div className="w-full bg-neutral-400 h-[10vh] flex justify-center items-center">
+      <p className="text-lg font-medium">Syncoffice</p>
     </div>
   )
 }
